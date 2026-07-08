@@ -1,6 +1,7 @@
 import { getProductBySlug } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+export const revalidate = 60;
 import Link from "next/link";
 import { ArrowLeft, ShieldCheck, Leaf } from "lucide-react";
 import AddToCartButton from "@/components/AddToCartButton";

@@ -12,6 +12,8 @@ const CATEGORIES = [
   { name: "Traditional Snacks", image: "/images/karam_gavvalu.jpeg", href: "/products?category=traditional-snacks" }
 ];
 
+export const revalidate = 60; // Revalidate page every 60 seconds
+
 export default async function Home() {
   const products = await getProducts();
   const bestSellerSlugs = [
@@ -63,9 +65,12 @@ export default async function Home() {
             Authentic Traditional Snacks Delivered Across India. Freshly prepared using heritage recipes and premium ingredients.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
-            <Link href="/products" className="w-full sm:w-auto inline-flex h-10 md:h-12 items-center justify-center rounded bg-gold px-8 font-bold text-primary-maroon transition-all hover:bg-gold-antique">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start items-center w-full sm:w-auto">
+            <Link href="/products" className="w-full sm:w-auto inline-flex h-10 md:h-12 items-center justify-center rounded bg-gold px-8 font-bold text-primary-maroon transition-all hover:bg-gold-antique shadow-md">
               Order Now
+            </Link>
+            <Link href="#categories-section" className="w-full sm:w-auto inline-flex h-10 md:h-12 items-center justify-center rounded border-2 border-white/80 bg-black/20 backdrop-blur-sm px-8 font-bold text-white transition-all hover:bg-white/10 hover:border-white shadow-md">
+              Explore Categories
             </Link>
           </div>
         </div>

@@ -2,6 +2,8 @@ import { getProducts } from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 
+export const revalidate = 60;
+
 export default async function ProductsPage({
   searchParams,
 }: {
