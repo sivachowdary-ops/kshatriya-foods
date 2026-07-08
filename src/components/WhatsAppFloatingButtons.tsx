@@ -23,7 +23,7 @@ export default function WhatsAppFloatingButtons() {
       )}
 
       <a 
-        href="https://wa.me/917095403677?text=Hello%20Kshatriya%20Foods%2C%20I%20have%20visited%20your%20website%20and%20I%20would%20like%20to%20make%20an%20inquiry." 
+        href="https://wa.me/917095403677?text=Hello%20Kshatriya%20Foods%2C%20I%20have%20visited%20your%20website%20and%20I%20would%20like%20to%20order%20the%20product." 
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-[#25D366] text-white h-14 w-14 rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 group"

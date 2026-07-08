@@ -20,6 +20,7 @@ export default async function Home() {
     "kova-dry-fruit-putharekulu",
     "dry-fruit-putharekulu",
     "sugar-putharekulu",
+    "chocolate-dry-fruit-putharekulu",
     "sugar-mamidi-tandara",
     "bellam-mamidi-tandara"
   ];
@@ -44,7 +45,7 @@ export default async function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
         </div>
         
-        <div className="container relative z-10 px-4 md:px-8 text-center max-w-4xl mx-auto flex flex-col items-center">
+        <div className="container relative z-10 px-4 md:px-8 text-left max-w-6xl mx-auto flex flex-col items-start">
           <div className="relative h-20 w-20 md:h-24 md:w-24 overflow-hidden rounded-full border-2 border-gold shadow-lg mb-4">
             <Image 
               src="/images/kshatriya_logo.jpeg" 
@@ -55,14 +56,14 @@ export default async function Home() {
               priority
             />
           </div>
-          <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
             KSHATRIYA FOOD PRODUCTS
           </h2>
-          <p className="text-sm md:text-lg text-bg-alternate mb-6 leading-relaxed max-w-xl mx-auto font-medium">
+          <p className="text-sm md:text-lg text-bg-alternate mb-6 leading-relaxed max-w-xl font-medium">
             Authentic Traditional Snacks Delivered Across India. Freshly prepared using heritage recipes and premium ingredients.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
             <Link href="/products" className="w-full sm:w-auto inline-flex h-10 md:h-12 items-center justify-center rounded bg-gold px-8 font-bold text-primary-maroon transition-all hover:bg-gold-antique">
               Order Now
             </Link>
