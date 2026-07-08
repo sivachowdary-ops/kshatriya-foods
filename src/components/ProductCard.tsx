@@ -25,7 +25,7 @@ export default function ProductCard({ id, name, slug, image, price, unit_label }
 
   return (
     <div className="group relative flex flex-col h-full bg-bg-secondary border border-bg-alternate rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <Link href={`/product/${slug}`} className="block relative aspect-[4/5] overflow-hidden bg-background border-b border-bg-alternate">
+      <Link href={`/product/${slug}`} className="block relative aspect-square overflow-hidden bg-background border-b border-bg-alternate">
         {image ? (
           <Image
             src={image}
@@ -42,25 +42,25 @@ export default function ProductCard({ id, name, slug, image, price, unit_label }
         )}
       </Link>
       
-      <div className="p-4 md:p-5 flex flex-col flex-grow text-left bg-bg-secondary">
+      <div className="p-3 md:p-5 flex flex-col flex-grow text-left bg-bg-secondary">
         <Link href={`/product/${slug}`} className="block flex-grow">
-          <h3 className="font-heading text-base md:text-lg font-bold text-text-primary group-hover:text-primary-maroon transition-colors line-clamp-2">
+          <h3 className="font-heading text-[15px] leading-tight md:text-lg font-bold text-text-primary group-hover:text-primary-maroon transition-colors line-clamp-2">
             {name}
           </h3>
         </Link>
         
-        <div className="mt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full">
-          <div>
-            <span className="text-lg font-bold text-primary-maroon">₹{price}</span>
-            <span className="text-xs text-text-muted ml-1 font-medium">/{unit_label}</span>
+        <div className="mt-3 flex flex-col xl:flex-row xl:items-center justify-between gap-2 md:gap-3 w-full">
+          <div className="flex items-baseline flex-wrap">
+            <span className="text-base md:text-lg font-bold text-primary-maroon">₹{price}</span>
+            <span className="text-[10px] md:text-xs text-text-muted ml-1 font-medium">/{unit_label}</span>
           </div>
           
           <button 
             onClick={handleAddToCart}
-            className="h-10 px-4 rounded border border-primary-maroon bg-transparent text-primary-maroon flex items-center justify-center gap-2 hover:bg-primary-maroon hover:text-white transition-all w-full sm:w-auto shrink-0"
+            className="h-8 md:h-10 px-2 md:px-4 rounded border border-primary-maroon bg-transparent text-primary-maroon flex items-center justify-center gap-1.5 md:gap-2 hover:bg-primary-maroon hover:text-white transition-all w-full xl:w-auto shrink-0"
           >
-            <ShoppingBag className="h-4 w-4" />
-            <span className="text-xs font-bold uppercase tracking-wider">Add</span>
+            <ShoppingBag className="h-3.5 w-3.5 md:h-4 md:w-4" />
+            <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider">Add</span>
           </button>
         </div>
       </div>

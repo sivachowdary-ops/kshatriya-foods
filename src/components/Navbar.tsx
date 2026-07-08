@@ -27,8 +27,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 w-full bg-bg-secondary border-b border-bg-alternate py-3 shadow-md">
-        <div className="container mx-auto flex items-center justify-between px-4 md:px-8">
+      <header className="sticky top-0 z-50 w-full bg-bg-secondary border-b border-bg-alternate shadow-md">
+        <div className="container mx-auto flex items-center justify-between px-4 md:px-8 py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-full border border-primary-maroon">
@@ -85,25 +85,25 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </header>
 
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-sm pt-24 px-6 md:hidden">
-          <nav className="flex flex-col gap-6">
-            {["Home", "Categories", "How to Order", "FAQs"].map((item) => (
-              <Link 
-                key={item} 
-                href={item === "Home" ? "/" : item === "Categories" ? "/products" : `/#${item.toLowerCase().replace(/ /g, '-')}`} 
-                onClick={() => setMobileMenuOpen(false)}
-                className="font-heading font-medium text-2xl text-text-primary hover:text-primary-maroon transition-colors border-b border-bg-alternate pb-4"
-              >
-                {item}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-background border-b border-bg-alternate shadow-xl md:hidden flex flex-col">
+            <nav className="flex flex-col">
+              {["Home", "Categories", "How to Order", "FAQs"].map((item) => (
+                <Link 
+                  key={item} 
+                  href={item === "Home" ? "/" : item === "Categories" ? "/products" : `/#${item.toLowerCase().replace(/ /g, '-')}`} 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="font-heading font-medium text-xl text-text-primary hover:bg-bg-alternate hover:text-primary-maroon transition-colors px-6 py-4 border-b border-bg-alternate last:border-b-0"
+                >
+                  {item}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
+      </header>
     </>
   );
 }

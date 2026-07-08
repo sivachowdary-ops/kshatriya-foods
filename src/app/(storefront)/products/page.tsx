@@ -1,5 +1,6 @@
 import { getProducts } from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
+import Link from "next/link";
 
 export default async function ProductsPage({
   searchParams,
@@ -29,7 +30,7 @@ export default async function ProductsPage({
         {/* Category Filters */}
         <div className="flex flex-wrap justify-center gap-4">
           {categories.map((c) => (
-            <a
+            <Link
               key={c.id}
               href={c.id ? `/products?category=${c.id}` : "/products"}
               className={`px-6 py-2 rounded-full border transition-colors ${
@@ -39,12 +40,12 @@ export default async function ProductsPage({
               }`}
             >
               {c.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard key={product.id} {...product} />
