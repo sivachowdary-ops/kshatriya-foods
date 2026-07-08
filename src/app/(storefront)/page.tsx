@@ -29,10 +29,10 @@ export default async function Home() {
     <div className="flex flex-col min-h-screen bg-background text-text-primary">
 
       {/* Standard Hero Section */}
-      <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden border-b border-primary-maroon/20">
+      <section className="relative w-full h-[350px] md:h-[450px] flex items-center justify-center overflow-hidden border-b border-primary-maroon/20">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/hero_cinematic.png" 
+            src="/images/Kaju_dry_fruit.jpeg" 
             alt="Traditional Indian Sweets" 
             fill 
             className="object-cover"
@@ -41,29 +41,31 @@ export default async function Home() {
             quality={60}
           />
           {/* Darker overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
         </div>
         
-        <div className="container relative z-10 px-4 md:px-8 text-left max-w-6xl w-full mx-auto">
-          <div className="max-w-2xl">
-            <span className="inline-block bg-gold text-primary-maroon border border-gold px-4 py-1 rounded text-xs font-bold tracking-widest uppercase mb-6">
-              Traditional & Authentic
-            </span>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight text-left">
-              KSHATRIYA FOOD PRODUCTS
-            </h2>
-            <p className="text-base md:text-lg text-bg-alternate mb-8 leading-relaxed text-left max-w-xl">
-              Authentic Traditional Snacks Delivered Across India. Freshly prepared using heritage recipes and premium ingredients.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
-              <Link href="/products" className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded bg-gold px-8 font-bold text-primary-maroon transition-all hover:bg-gold-antique">
-                Shop Now
-              </Link>
-              <Link href="#categories-section" className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded border border-white px-8 font-semibold text-white transition-all hover:bg-white/10">
-                Explore Categories
-              </Link>
-            </div>
+        <div className="container relative z-10 px-4 md:px-8 text-center max-w-4xl mx-auto flex flex-col items-center">
+          <div className="relative h-20 w-20 md:h-24 md:w-24 overflow-hidden rounded-full border-2 border-gold shadow-lg mb-4">
+            <Image 
+              src="/images/kshatriya_logo.jpeg" 
+              alt="Kshatriya Foods Logo" 
+              fill
+              className="object-cover"
+              sizes="96px"
+              priority
+            />
+          </div>
+          <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+            KSHATRIYA FOOD PRODUCTS
+          </h2>
+          <p className="text-sm md:text-lg text-bg-alternate mb-6 leading-relaxed max-w-xl mx-auto font-medium">
+            Authentic Traditional Snacks Delivered Across India. Freshly prepared using heritage recipes and premium ingredients.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/products" className="w-full sm:w-auto inline-flex h-10 md:h-12 items-center justify-center rounded bg-gold px-8 font-bold text-primary-maroon transition-all hover:bg-gold-antique">
+              Order Now
+            </Link>
           </div>
         </div>
       </section>
