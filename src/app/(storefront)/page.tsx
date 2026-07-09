@@ -23,6 +23,8 @@ export default async function Home() {
     "dry-fruit-putharekulu",
     "sugar-putharekulu",
     "chocolate-dry-fruit-putharekulu",
+    "dates-putharekulu",
+    "samosa-putharekulu",
     "sugar-mamidi-tandara",
     "bellam-mamidi-tandara"
   ];
