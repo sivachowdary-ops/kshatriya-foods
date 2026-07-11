@@ -26,8 +26,7 @@ export default async function Home() {
     "dates-putharekulu",
     "samosa-putharekulu",
     "sugar-mamidi-tandara",
-    "bellam-mamidi-tandara",
-    "special-combo"
+    "bellam-mamidi-tandara"
   ];
   const featuredProducts = products.filter(p => bestSellerSlugs.includes(p.slug));
 
