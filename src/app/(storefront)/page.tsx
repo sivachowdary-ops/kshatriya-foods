@@ -129,35 +129,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Heritage Video Section */}
-      <section className="py-16 bg-bg-secondary border-y border-bg-alternate">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-10">
-            <h3 className="font-heading text-3xl font-bold text-text-primary mb-2">
-              Experience Our Heritage
-            </h3>
-            <p className="text-sm font-medium text-primary-maroon uppercase tracking-wider mb-4">
-              Watch how our authentic Putharekulu is prepared
-            </p>
-            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-              Step inside our traditional kitchen and see the skilled artisanship behind crafting the paper-thin sheets, layered with organic jaggery, pure ghee, and rich dry fruits.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-maroon/20 bg-black aspect-video relative group">
-            <video 
-              src="/videos/kshtraya-foods_vid.mp4" 
-              controls 
-              className="w-full h-full object-cover"
-              poster="/images/hero_cinematic.png"
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </section>
-
       {/* Founder Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 md:px-8">
@@ -180,30 +151,33 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Heritage Video Section (Reel format) */}
       <section className="py-16 bg-bg-secondary border-y border-bg-alternate">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-10">
-            <h3 className="font-heading text-3xl font-bold text-text-primary mb-2">Why Choose Kshatriya?</h3>
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <h3 className="font-heading text-3xl font-bold text-text-primary mb-2">
+              Experience Our Heritage
+            </h3>
+            <p className="text-sm font-medium text-primary-maroon uppercase tracking-wider mb-4">
+              Watch how our authentic Putharekulu is prepared
+            </p>
+            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              Step inside our traditional kitchen and see the skilled artisanship behind crafting the paper-thin sheets, layered with organic jaggery, pure ghee, and rich dry fruits.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: Medal, title: "Traditional Recipes", desc: "Handed down through generations, preserving the genuine flavor of home." },
-              { icon: Clock, title: "Fresh Preparation", desc: "We prepare snacks in small batches upon receiving orders for maximum freshness." },
-              { icon: ShieldCheck, title: "Hygienic Packaging", desc: "Prepared in sanitised kitchens and sealed securely to prevent leakage and moisture." },
-              { icon: Truck, title: "Nationwide Delivery", desc: "Partnership with top courier services for reliable shipping to any corner of India." }
-            ].map((feature, i) => (
-              <div key={i} className="flex gap-4 p-6 rounded-xl bg-background border border-bg-alternate">
-                <div className="h-12 w-12 rounded bg-primary-maroon/10 flex items-center justify-center shrink-0 text-primary-maroon">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h4 className="font-heading text-lg font-bold text-text-primary mb-2">{feature.title}</h4>
-                  <p className="text-sm text-text-secondary leading-relaxed">{feature.desc}</p>
-                </div>
-              </div>
-            ))}
+          {/* Centered Reel video player with a premium smartphone mock styling */}
+          <div className="max-w-[340px] mx-auto rounded-3xl overflow-hidden shadow-2xl border-8 border-primary-maroon/20 bg-black aspect-[9/16] relative">
+            <video 
+              src="/videos/kshtraya-foods_vid.mp4" 
+              controls 
+              className="w-full h-full object-cover"
+              poster="/images/hero_cinematic.png"
+              preload="metadata"
+              playsInline
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
