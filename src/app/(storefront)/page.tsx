@@ -129,6 +129,35 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Heritage Video Section */}
+      <section className="py-16 bg-bg-secondary border-y border-bg-alternate">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-10">
+            <h3 className="font-heading text-3xl font-bold text-text-primary mb-2">
+              Experience Our Heritage
+            </h3>
+            <p className="text-sm font-medium text-primary-maroon uppercase tracking-wider mb-4">
+              Watch how our authentic Putharekulu is prepared
+            </p>
+            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              Step inside our traditional kitchen and see the skilled artisanship behind crafting the paper-thin sheets, layered with organic jaggery, pure ghee, and rich dry fruits.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-maroon/20 bg-black aspect-video relative group">
+            <video 
+              src="/videos/kshtraya-foods_vid.mp4" 
+              controls 
+              className="w-full h-full object-cover"
+              poster="/images/hero_cinematic.png"
+              preload="metadata"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Founder Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 md:px-8">
